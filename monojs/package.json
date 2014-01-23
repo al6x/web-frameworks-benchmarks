@@ -1,0 +1,8 @@
+{
+  "name"         : "monojs-sample",
+  "version"      : "1.0.0",
+  "dependencies" : {
+    "mono"          : "1.0.x",
+    "coffee-script" : "1.6.x"
+  }
+}

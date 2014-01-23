@@ -15,7 +15,5 @@ class PostsController < ApplicationController
 
     # Making a little more data to process.
     @posts = [data, data, data, data, data]
-
-    render action: 'index'
   end
 end

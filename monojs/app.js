@@ -1,7 +1,5 @@
 require('coffee-script')
-var mono = require('mono')
-global._ = mono._
-global.app = mono.app
+global.app = require('mono').app
 
 // Configuring.
 app.configure(__dirname)

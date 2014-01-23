@@ -1,6 +1,7 @@
 http = require 'http'
 
 # Call remote HTTP service.
+http.globalAgent.maxSockets = 1000
 callRemote = app.sync (options, data, callback) ->
   req = http.request options, (res) ->
     buff = []

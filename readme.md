@@ -14,23 +14,6 @@ Performance measured using `siege` tool with following command
 
 # Results
 
-## Express.js
-
-```
-Transactions:		         225 hits
-Availability:		      100.00 %
-Elapsed time:		        9.35 secs
-Data transferred:	        0.51 MB
-Response time:		        3.20 secs
-Transaction rate:	       24.06 trans/sec
-Throughput:		        0.05 MB/sec
-Concurrency:		       76.94
-Successful transactions:         225
-Failed transactions:	           0
-Longest transaction:	        4.07
-Shortest transaction:	        0.20
-```
-
 ## Ruby on Rails (with Puma)
 
 ```
@@ -48,19 +31,36 @@ Longest transaction:	        2.97
 Shortest transaction:	        0.36
 ```
 
+## Express.js
+
+```
+Transactions:		        3158 hits
+Availability:		      100.00 %
+Elapsed time:		        9.55 secs
+Data transferred:	        7.19 MB
+Response time:		        0.30 secs
+Transaction rate:	      330.68 trans/sec
+Throughput:		        0.75 MB/sec
+Concurrency:		       97.56
+Successful transactions:        3158
+Failed transactions:	           0
+Longest transaction:	        0.34
+Shortest transaction:	        0.20
+```
+
 ## Mono.js
 
 ```
-Transactions:		         230 hits
+Transactions:		        2839 hits
 Availability:		      100.00 %
-Elapsed time:		        9.48 secs
-Data transferred:	        0.52 MB
-Response time:		        3.25 secs
-Transaction rate:	       24.26 trans/sec
-Throughput:		        0.06 MB/sec
-Concurrency:		       78.94
-Successful transactions:         230
+Elapsed time:		        9.54 secs
+Data transferred:	        6.47 MB
+Response time:		        0.33 secs
+Transaction rate:	      297.59 trans/sec
+Throughput:		        0.68 MB/sec
+Concurrency:		       96.91
+Successful transactions:        2839
 Failed transactions:	           0
-Longest transaction:	        4.12
-Shortest transaction:	        0.37
+Longest transaction:	        0.38
+Shortest transaction:	        0.20
 ```

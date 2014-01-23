@@ -8,6 +8,7 @@ app.use(express.bodyParser())
 app.engine('html', ejs.renderFile)
 
 // Call remote HTTP service.
+http.globalAgent.maxSockets = 1000
 var callRemote = function(options, data, callback){
   var req = http.request(options, function(res){
     var buff = []

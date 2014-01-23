@@ -1,7 +1,6 @@
 var http    = require('http')
 var express = require('express')
 var ejs     = require('ejs')
-var fs      = require('fs')
 
 // Configuring.
 var app = express()
@@ -21,24 +20,8 @@ var callRemote = function(options, data, callback){
   req.end()
 }
 
-// Responding after reading file.
-app.get('/file', function(req, res){
-  // Reading some text from file.
-  fs.readFile('../lorem-ipsum.txt', function(err, text){
-    // Making a little more data to process.
-    var posts = [text, text, text, text, text]
-
-    // Rendering
-    app.render('index.html', {posts: posts}, function(err, html){
-      app.render('layout.html', {html: html}, function(err, html){
-        res.send(html)
-      })
-    })
-  })
-})
-
 // Responding after calling remote service.
-app.get('/service', function(req, res){
+app.get('/', function(req, res){
   // Reading some text from remote service.
   var options = {host: 'localhost', port: 4000, path: '/', method: 'GET'}
   callRemote(options, '', function(err, text){

@@ -1,7 +1,6 @@
 RailsTest::Application.routes.draw do
-  get '/file',    controller: 'posts', action: 'file'
-  get '/service', controller: 'posts', action: 'service'
-  # get "posts/index"
+  get '/', controller: 'posts', action: 'index'
+  get "posts/index"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

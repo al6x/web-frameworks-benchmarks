@@ -6,4 +6,4 @@ How to run:
 - Install dependencies `npm install`.
 - Run lorem-ipsum service `node lorem-ipsum.js`.
 - Run sample in production `environment=production node app.js`.
-- Use http://localhost:3000/file or http://localhost:3000/service to run a benchmark.
+- Use http://localhost:3000 to run a benchmark.

@@ -8,4 +8,4 @@ How to run:
 - Install node.js, it's needed for remote lorem-ipsum service.
 - Run lorem-ipsum service `node lorem-ipsum.js`.
 - Run sample in production `rails server -e production`.
-- Use http://localhost:3000/file or http://localhost:3000/service to run a benchmark.
+- Use http://localhost:3000 to run a benchmark.

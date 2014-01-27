@@ -14,21 +14,21 @@ Performance measured using `siege` tool with following command
 
 # Results
 
-## Ruby on Rails (with Puma)
+## Ruby on Rails (Ruby v. 2.1.0, Rails v. 4.0.2, with Puma)
 
 ```
-Transactions:		         223 hits
+Transactions:		        2258 hits
 Availability:		      100.00 %
-Elapsed time:		        9.64 secs
-Data transferred:	        0.51 MB
-Response time:		        0.75 secs
-Transaction rate:	       23.13 trans/sec
-Throughput:		        0.05 MB/sec
-Concurrency:		       17.34
-Successful transactions:         223
+Elapsed time:		        9.12 secs
+Data transferred:	        5.13 MB
+Response time:		        0.39 secs
+Transaction rate:	      247.59 trans/sec
+Throughput:		        0.56 MB/sec
+Concurrency:		       97.64
+Successful transactions:        2258
 Failed transactions:	           0
-Longest transaction:	        2.97
-Shortest transaction:	        0.36
+Longest transaction:	        0.52
+Shortest transaction:	        0.22
 ```
 
 ## Express.js
@@ -64,3 +64,8 @@ Failed transactions:	           0
 Longest transaction:	        0.38
 Shortest transaction:	        0.20
 ```
+
+# Contributors
+
+- [Alexey Petrushin](http://petrush.in)
+- [Anton Ageev](https://github.com/antage)

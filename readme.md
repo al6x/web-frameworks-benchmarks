@@ -8,61 +8,49 @@ other services, how fast its templating engine is and how fast it is itself.
 
 In every folder there's an example for different Web Framework, checkout instructions in `readme.md` in corresponding folder.
 
-Performance measured using `siege` tool with following command
+Performance measured using `wrk` tool with following command
 
-    siege -b -t10s -c100 http://localhost:3000
+    wrk -t2 -c100 -d10s http://localhost:3000
 
 # Results
 
 ## Ruby on Rails (Ruby v. 2.1.0, Rails v. 4.0.2, with Puma)
 
 ```
-Transactions:		        2258 hits
-Availability:		      100.00 %
-Elapsed time:		        9.12 secs
-Data transferred:	        5.13 MB
-Response time:		        0.39 secs
-Transaction rate:	      247.59 trans/sec
-Throughput:		        0.56 MB/sec
-Concurrency:		       97.64
-Successful transactions:        2258
-Failed transactions:	           0
-Longest transaction:	        0.52
-Shortest transaction:	        0.22
+Running 10s test @ http://localhost:3000
+  4 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   342.11ms   41.09ms 398.70ms   69.36%
+    Req/Sec    72.43      6.95    90.00     76.60%
+  2914 requests in 10.01s, 7.70MB read
+Requests/sec:    291.19
+Transfer/sec:    787.98KB
 ```
 
 ## Express.js
 
 ```
-Transactions:		        3158 hits
-Availability:		      100.00 %
-Elapsed time:		        9.55 secs
-Data transferred:	        7.19 MB
-Response time:		        0.30 secs
-Transaction rate:	      330.68 trans/sec
-Throughput:		        0.75 MB/sec
-Concurrency:		       97.56
-Successful transactions:        3158
-Failed transactions:	           0
-Longest transaction:	        0.34
-Shortest transaction:	        0.20
+Running 10s test @ http://localhost:3000
+  4 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   263.82ms   18.08ms 299.28ms   85.35%
+    Req/Sec    95.83      9.80   127.00     83.10%
+  3782 requests in 10.01s, 9.28MB read
+Requests/sec:    377.99
+Transfer/sec:      0.93MB
 ```
 
 ## Mono.js
 
 ```
-Transactions:		        2839 hits
-Availability:		      100.00 %
-Elapsed time:		        9.54 secs
-Data transferred:	        6.47 MB
-Response time:		        0.33 secs
-Transaction rate:	      297.59 trans/sec
-Throughput:		        0.68 MB/sec
-Concurrency:		       96.91
-Successful transactions:        2839
-Failed transactions:	           0
-Longest transaction:	        0.38
-Shortest transaction:	        0.20
+Running 10s test @ http://localhost:3000
+  4 threads and 100 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   295.46ms   27.34ms 372.29ms   86.04%
+    Req/Sec    85.34     13.82   120.00     47.17%
+  3361 requests in 10.01s, 8.20MB read
+Requests/sec:    335.80
+Transfer/sec:    838.84KB
 ```
 
 # Contributors

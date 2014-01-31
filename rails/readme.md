@@ -7,5 +7,5 @@ How to run:
 - Install dependencies `bundle install`.
 - Install node.js, it's needed for remote lorem-ipsum service.
 - Run lorem-ipsum service `node lorem-ipsum.js`.
-- Run sample in production `RAILS_ENV=production bundle exec puma -b tcp://127.0.0.1:3000 -t 100:100 config.ru`.
+- Run sample in production `RAILS_ENV=production benchmarkundle exec puma -b tcp://127.0.0.1:3000 -t 100:100 config.ru`.
 - Use http://localhost:3000 to run a benchmark.

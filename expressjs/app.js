@@ -8,7 +8,7 @@ app.use(express.bodyParser())
 app.engine('html', ejs.renderFile)
 
 // Call remote HTTP service.
-http.globalAgent.maxSockets = 1000
+http.globalAgent.maxSockets = 3000
 var callRemote = function(options, data, callback){
   var req = http.request(options, function(res){
     var buff = []
@@ -26,6 +26,8 @@ app.get('/', function(req, res){
   // Reading some text from remote service.
   var options = {host: 'localhost', port: 4000, path: '/', method: 'GET'}
   callRemote(options, '', function(err, text){
+    if(err) return res.send(500)
+
     // Making a little more data to process.
     var posts = [text, text, text, text, text]
 
